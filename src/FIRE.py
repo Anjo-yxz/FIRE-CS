@@ -7,8 +7,6 @@ import sys
 
 OFFSET_XRAY = 0xC060DC
 
-# Use a consistent base path for resources both in development and when packaged by PyInstaller.
-# When running as a PyInstaller onefile bundle, sys._MEIPASS points to the temporary unpack directory.
 BASE_PATH = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
 
 def resource_path(path: str) -> str:
